@@ -1,0 +1,22 @@
+Package: farsPackage
+Title: Tools for Analyzing and Visualizing FARS Accident Data
+Version: 0.1.0
+Authors@R: 
+    person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
+Description: Provides functions for reading, summarizing, and visualizing data from the Fatality Analysis Reporting System (FARS). Includes tools to extract monthly accident data, create summaries across multiple years, and map accident locations by state.
+License: MIT
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Imports:
+    readr,
+    dplyr,
+    tidyr,
+    maps,
+    graphics
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
