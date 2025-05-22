@@ -1,0 +1,114 @@
+---
+title: "Using farsPackage"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using farsPackage}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+```
+
+```{r}
+library(farsPackage)
+```
+
+
+## Introduction
+
+The `farsPackage` provides a set of functions for reading, summarizing, and visualizing data from the Fatality Analysis Reporting System (FARS). This vignette demonstrates how to use the package to analyze accident data over multiple years and states.
+
+---
+
+## Reading a FARS Data File
+
+You can read a FARS data file using `fars_read()`. Make sure the `.csv.bz2` files are in the correct path.
+
+```{r eval=FALSE}
+fars_read("inst/extdata/accident_2013.csv.bz2")
+```
+
+---
+
+## Generating Filenames
+
+Use `make_filename()` to generate standardized file names based on year:
+
+```{r}
+make_filename(2015)
+```
+
+---
+
+## Reading Multiple Years
+
+Use `fars_read_years()` to extract month and year data from multiple files:
+
+```{r eval=FALSE}
+fars_read_years(c(2013, 2014, 2015))
+```
+
+If a file is missing or the year is invalid, the function will issue a warning and return `NULL` for that year.
+
+---
+
+## Summarizing Accidents by Month and Year
+
+`fars_summarize_years()` creates a summary of the number of accidents per month for each year:
+
+```{r eval=FALSE}
+fars_summarize_years(c(2013, 2014, 2015))
+```
+
+This returns a wide-format tibble with `MONTH` as rows and each `year` as a column.
+
+---
+
+## Mapping Accidents by State
+
+Use `fars_map_state()` to plot the location of accidents on a U.S. state map for a given state number and year:
+
+```{r eval=FALSE}
+fars_map_state(1, 2013)  # Alabama (STATE == 1)
+```
+
+If there are no valid points or the state number is invalid, it will return a message and not produce a plot.
+
+---
+
+## Conclusion
+
+This vignette demonstrated how to:
+
+* Read and inspect FARS data files
+* Generate standardized file names
+* Summarize accident data across multiple years
+* Plot accidents on a U.S. map
+
+`farsPackage` makes it easier to work with and visualize FARS data in R.
+
+````
+
+---
+
+### ✅ Next Step
+
+Once you paste that into `vignettes/farsPackage.Rmd`, run:
+
+```r
+devtools::build_vignettes()
+````
+
+Then view the result with:
+
+```r
+browseVignettes("farsPackage")
+```
+
+Let me know if you'd like help customizing this for a specific dataset you’re working with or adding images/plots!
