@@ -18,7 +18,8 @@ This function checks for the existence of the file, reads it using \code{readr::
 and returns the data as a tibble.
 }
 \examples{
-data_2013 <- fars_read("data/accident_2013.csv.bz2")
-
+\dontrun{
+data_2013 <- fars_read("accident_2013.csv.bz2")
+}
 
 }

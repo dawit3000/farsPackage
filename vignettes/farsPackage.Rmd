@@ -31,7 +31,8 @@ The `farsPackage` provides a set of functions for reading, summarizing, and visu
 You can read a FARS data file using `fars_read()`. Make sure the `.csv.bz2` files are in the correct path.
 
 ```{r eval=FALSE}
-fars_read("inst/extdata/accident_2013.csv.bz2")
+fars_read(system.file("extdata", "accident_2013.csv.bz2", package = "farsPackage"))
+
 ```
 
 ---
@@ -76,6 +77,7 @@ Use `fars_map_state()` to plot the location of accidents on a U.S. state map for
 
 ```{r eval=FALSE}
 fars_map_state(1, 2013)  # Alabama (STATE == 1)
+
 ```
 
 If there are no valid points or the state number is invalid, it will return a message and not produce a plot.
@@ -94,21 +96,3 @@ This vignette demonstrated how to:
 `farsPackage` makes it easier to work with and visualize FARS data in R.
 
 ````
-
----
-
-### ✅ Next Step
-
-Once you paste that into `vignettes/farsPackage.Rmd`, run:
-
-```r
-devtools::build_vignettes()
-````
-
-Then view the result with:
-
-```r
-browseVignettes("farsPackage")
-```
-
-Let me know if you'd like help customizing this for a specific dataset you’re working with or adding images/plots!
