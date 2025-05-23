@@ -9,7 +9,7 @@
 #' @return A tibble (`tbl_df`) containing the FARS data.
 #'
 #'@examples
-#'data_2013 <- fars_read("data/accident_2013.csv.bz2")
+#'data_2013 <- fars_read("accident_2013.csv.bz2")
 #'
 #'
 #' @importFrom readr read_csv
