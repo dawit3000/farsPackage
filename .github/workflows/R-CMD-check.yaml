@@ -39,7 +39,8 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: rcmdcheck,ggplot2  # Add other dependencies here if needed
+          extra-packages: rcmdcheck,ggplot2
+          pak: false
 
       - uses: r-lib/actions/check-r-package@v2
         with:
