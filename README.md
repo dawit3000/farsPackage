@@ -1,6 +1,6 @@
 # farsPackage
 
-[![R-CMD-check](https://github.com/dawit3000/farsPackage/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dawit3000/farsPackage/actions)
+[![R-CMD-check](https://github.com/dawit3000/farsPackage/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dawit3000/farsPackage/actions/workflows/R-CMD-check.yaml)
 
 
 ## Overview
