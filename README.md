@@ -26,6 +26,7 @@ library(farsPackage)
 # Read FARS data for 2013 (included in package's extdata folder)
 file_2013 <- system.file("extdata", "accident_2013.csv.bz2", package = "farsPackage")
 data_2013 <- fars_read(file_2013)
+summary(data_2013)
 
 # Summarize accident counts for multiple years
 years <- c(2013, 2014, 2015)
