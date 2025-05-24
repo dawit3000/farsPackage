@@ -44,6 +44,6 @@ To see a full walkthrough of all package features, check out the vignette:
 
 ## License
 
-MIT © \[Dawit Aberra]
+MIT © Dawit Aberra
 
 ```
